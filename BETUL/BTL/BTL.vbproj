@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65E51076-5906-479C-B957-F14B8CABECE0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BTL.My.MyApplication</StartupObject>
+    <RootNamespace>BTL</RootNamespace>
+    <AssemblyName>BTL</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BTL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BTL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\Office15\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.110.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.110.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.110.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Arduino.Designer.vb">
+      <DependentUpon>Arduino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Arduino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarcodeCreate.Designer.vb">
+      <DependentUpon>BarcodeCreate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BarcodeCreate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarcodePrinterCopy.Designer.vb">
+      <DependentUpon>BarcodePrinterCopy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BarcodePrinterCopy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarcodePrinter.Designer.vb">
+      <DependentUpon>BarcodePrinter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BarcodePrinter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommManager.vb" />
+    <Compile Include="DisplayPage.Designer.vb">
+      <DependentUpon>DisplayPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPage.Designer.vb">
+      <DependentUpon>ForgotPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GridDeneme.Designer.vb">
+      <DependentUpon>frm_GridDeneme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GridDeneme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MySettings.Designer.vb">
+      <DependentUpon>frm_MySettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MySettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INIfile.vb" />
+    <Compile Include="LogCSV.vb" />
+    <Compile Include="logfile.vb" />
+    <Compile Include="Potansiyometre.Designer.vb">
+      <DependentUpon>Potansiyometre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Potansiyometre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="SignUpPage.Designer.vb">
+      <DependentUpon>SignUpPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.vb">
+      <DependentUpon>LoginPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resizer.vb" />
+    <Compile Include="SolderingTest.Designer.vb">
+      <DependentUpon>SolderingTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SolderingTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLiteTools.vb" />
+    <Compile Include="StokProgram.Designer.vb">
+      <DependentUpon>StokProgram.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StokProgram.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEST.Designer.vb">
+      <DependentUpon>TEST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TEST.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Arduino.resx">
+      <DependentUpon>Arduino.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarcodeCreate.resx">
+      <DependentUpon>BarcodeCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarcodePrinterCopy.resx">
+      <DependentUpon>BarcodePrinterCopy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarcodePrinter.resx">
+      <DependentUpon>BarcodePrinter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayPage.resx">
+      <DependentUpon>DisplayPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPage.resx">
+      <DependentUpon>ForgotPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GridDeneme.resx">
+      <DependentUpon>frm_GridDeneme.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MySettings.resx">
+      <DependentUpon>frm_MySettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Potansiyometre.resx">
+      <DependentUpon>Potansiyometre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpPage.resx">
+      <DependentUpon>SignUpPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SolderingTest.resx">
+      <DependentUpon>SolderingTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokProgram.resx">
+      <DependentUpon>StokProgram.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEST.resx">
+      <DependentUpon>TEST.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="image\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

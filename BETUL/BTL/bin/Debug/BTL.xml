@@ -1,0 +1,184 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BTL
+</name>
+</assembly>
+<members>
+<member name="T:BTL.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:BTL.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:BTL.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:BTL.CommManager.TransmissionType">
+ <summary>
+ enumeration to hold our transmission types
+ </summary>
+</member>
+<member name="T:BTL.CommManager.MessageType">
+ <summary>
+ enumeration to hold our message types
+ </summary>
+</member>
+<member name="P:BTL.CommManager.BaudRate">
+ <summary>
+ Property to hold the BaudRate
+ of our manager class
+ </summary>
+</member>
+<member name="P:BTL.CommManager.Parity">
+ <summary>
+ property to hold the Parity
+ of our manager class
+ </summary>
+</member>
+<member name="P:BTL.CommManager.StopBits">
+ <summary>
+ property to hold the StopBits
+ of our manager class
+ </summary>
+</member>
+<member name="P:BTL.CommManager.DataBits">
+ <summary>
+ property to hold the DataBits
+ of our manager class
+ </summary>
+</member>
+<member name="P:BTL.CommManager.PortName">
+ <summary>
+ property to hold the PortName
+ of our manager class
+ </summary>
+</member>
+<member name="P:BTL.CommManager.CurrentTransmissionType">
+ <summary>
+ property to hold our TransmissionType
+ of our manager class
+ </summary>
+</member>
+<member name="P:BTL.CommManager.Mask">
+ <summary>
+ property to hold the Mask
+ of our manager class
+ </summary>
+</member>
+<member name="P:BTL.CommManager.len">
+ <summary>
+ property to hold the Mask
+ of our manager class
+ </summary>
+</member>
+<member name="P:BTL.CommManager.STX">
+ <summary>
+ property to hold the Mask
+ of our manager class
+ </summary>
+</member>
+<member name="P:BTL.CommManager.ETX">
+ <summary>
+ property to hold the Mask
+ of our manager class
+ </summary>
+</member>
+<member name="P:BTL.CommManager.DisplayWindow">
+ <summary>
+ property to hold our display window
+ value
+ </summary>
+</member>
+<member name="P:BTL.CommManager.Message">
+ <summary>
+ Property to hold the message being sent
+ through the serial port
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:BTL.CommManager.Type">
+ <summary>
+ Message to hold the transmission type
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:BTL.CommManager.#ctor(System.String,System.String,System.String,System.String,System.String,System.Windows.Forms.TextBox)">
+ <summary>
+ Constructor to set the properties of our Manager Class
+ </summary>
+ <param name="baud">Desired BaudRate</param>
+ <param name="par">Desired Parity</param>
+ <param name="sBits">Desired StopBits</param>
+ <param name="dBits">Desired DataBits</param>
+ <param name="name">Desired PortName</param>
+</member>
+<member name="M:BTL.CommManager.#ctor">
+ <summary>
+ Comstructor to set the properties of our
+ serial port communicator to nothing
+ </summary>
+</member>
+<member name="M:BTL.CommManager.HexToByte(System.String)">
+ <summary>
+ method to convert hex string into a byte array
+ </summary>
+ <param name="msg">string to convert</param>
+ <returns>a byte array</returns>
+</member>
+<member name="M:BTL.CommManager.ByteToHex(System.Byte[])">
+ <summary>
+ method to convert a byte array into a hex string
+ </summary>
+ <param name="comByte">byte array to convert</param>
+ <returns>a hex string</returns>
+</member>
+<member name="M:BTL.CommManager.DisplayData(BTL.CommManager.MessageType,System.String)">
+ <summary>
+ Method to display the data to and
+ from the port on the screen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:BTL.CommManager.comPort_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+ <summary>
+ method that will be called when theres data waiting in the buffer
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:BTL.INIfile.#ctor(System.String)">
+ <summary>
+ IniFile Constructor
+ </summary>
+ <param name="IniPath">The path to the INI file.</param>
+</member>
+<member name="M:BTL.INIfile.ReadValue(System.String,System.String)">
+<summary>
+Read value from INI file
+ </summary>
+ <param name = "section" > The section Of the file To look In</param>
+ <param name = "key" > The key In the section To look For</param>
+</member>
+<member name="M:BTL.INIfile.WriteValue(System.String,System.String,System.String)">
+ <summary>
+ Write value to INI file
+ </summary>
+ <param name="section">The section of the file to write in</param>
+ <param name="key">The key in the section to write</param>
+ <param name="value">The value to write for the key</param>
+</member>
+</members>
+</doc>
